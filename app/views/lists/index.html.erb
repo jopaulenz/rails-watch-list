@@ -1,22 +1,25 @@
-<div>
-  <%= lists.each do |list| %>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
+  <div class="container">
+    <h1>Save any kind of <strong>movie</strong> !</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+      <%= link_to 'Create a new list', new_list_path(@list) %>
+    </p>
+  </div>
 </div>
 
+<div class="container-list">
+  <div class="list-text">
+    <h3>My Lists</h3>
+    <%= link_to 'Create a new list', new_list_path(@list), class: "btn btn-success" %>
+  </div>
 
-<%# <div class="container">
-  <div class="row cards">
+  <div class="lists">
     <% @lists.each do |list| %>
-      <div class="col-4-sm">
-        <% if list.imageUrl.empty? %>
-          <div class="card" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%), url('https://images.unsplash.com/photo-1534489573486-7d1fa4f436e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80')">
-            <h3><%= link_to list.name, list_path(list)%></h3>
-          </div>
-        <% else %>
-          <div class="card" style= "background-image: linear-gradient(to bottom, rgba(255,255,255,0.12) 0, rgba(0,0,0,0.55) 74.4%), url('<%= list.imageUrl %>')">
-          <h3><%= link_to list.name, list_path(list)%></h3>
-        </div>
-        <% end %>
-        </div>
-      <% end %>
-    </div>
-</div> %>
+      <%# <%= render '/lists/list', list: list %>
+      <h1><%= list.name %></h1>
+    <% end %>
+  </div>
+
+
+</div>
