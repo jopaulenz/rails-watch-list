@@ -1,0 +1,29 @@
+.lists-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.list-card-white {
+  font-size: larger;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f6f6f6;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 768px) {
+  .lists-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 767px) and (max-width: 992px) {
+  .lists-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+movie-card {
+  
+}

@@ -1,2 +1,24 @@
-<div class="movie-cards"></div>
-f.association
+<%= link_to "Back to Lists", lists_path, class: "btn btn-warning" %>
+
+<div class="p-5">
+  <h1><%= @list.name %></h1>
+  <div class="pt-5">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment, placeholder: "Write a comment" %>
+      <%= f.button :submit, "Add Bookmark", class: "btn btn-warning" %>
+    <% end %>
+  </div>
+
+  <h1>Movies in this list</h1>
+  <div class="movie-container lists-grid py-5">
+    <% @list.movies.each do |movie| %>
+      <div class="movie-card">
+        <h3><%= movie.title %></h3>
+        <p><%= movie.overview %></p>
+        <p>Rating: <%= movie.rating %></p>
+        <img src="<%= movie.poster_url %>" alt="<%= movie.title %> poster">
+      </div>
+    <% end %>
+  </div>
+</div>

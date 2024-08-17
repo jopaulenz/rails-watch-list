@@ -1,2 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.trash {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}

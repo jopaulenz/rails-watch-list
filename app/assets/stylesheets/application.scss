@@ -12,8 +12,18 @@
 @import "pages/index";
 
 body {
-  background-color: rgb(207, 204, 200);
+  background-color: rgb(212, 205, 196);
 }
-.home-banner {
-  height: 400px;
+
+.create-button{
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 40px;
+  border-radius: 20px;
+}
+
+h1 {
+  margin-top: 40px;
 }
